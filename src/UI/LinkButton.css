@@ -1,0 +1,8 @@
+.link-button {
+    height: 52px;
+    width: 156px;
+}
+
+.link-button:focus {
+    color: #86D3F4;
+}
