@@ -1,13 +1,41 @@
 button {
     cursor: pointer;
     background-color: #86D3F4;
-    border: solid black 1px;
+    border: solid black 3px;
     font-size: 16px;
     font-weight: medium;
     outline: none;
+    height: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 button:focus {
     background-color: black;
     color: white;
+}
+
+button:disabled {
+    border: 1px solid #4E4E4E;
+    color: #4E4E4E;
+}
+
+.link-button {
+    width: 156px;
+}
+
+.link-button:focus {
+    color: #86D3F4;
+}
+
+.number-button {
+    width: 88px;
+}
+
+.delete-button {
+    width: 186px;
+}
+
+.accept-button {
+    width: 284px;
 }

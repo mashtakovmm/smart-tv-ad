@@ -1,0 +1,10 @@
+.keypad-container {
+    width: 284px;
+    height: 258px;
+    padding: 20px 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
