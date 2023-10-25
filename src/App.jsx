@@ -1,10 +1,12 @@
 import './App.css'
+import AdVideo from './components/BGVideo'
+
 
 function App() {
 
   return (
     <>
-        <div>111</div>
+        <AdVideo />
     </>
   )
 }
