@@ -7,6 +7,7 @@ function Button(props) {
     const className = props.className
     const isDisabled = props.isDisabled
     const callback = props.callback
+    
     const [isActive, setIsActive] = useState(!isDisabled)
     const buttonRef = useRef(null);
 

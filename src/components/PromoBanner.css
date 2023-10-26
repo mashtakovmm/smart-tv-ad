@@ -26,7 +26,9 @@
     color: black;
     font-size: 32px;
     font-weight: bold;
-    width: 226px;
+    width: 100%;
+    text-align: center;
+    caret-color: transparent;
 }
 
 .phone-input::placeholder {

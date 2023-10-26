@@ -2,16 +2,20 @@ import qr from '../assets/githubqr.png'
 import "./PromoBanner.css"
 import Keypad from './Keypad'
 import Button from '../UI/Button'
-import { useReducer } from 'react'
+import { useEffect, useReducer, useState } from 'react'
 
 
 function PromoBanner() {
 
-    const [phoneNumber, dispatchPhoneNumber] = useReducer(phoneNumberReducer, '1111')
+    const [phoneNumber, dispatchPhoneNumber] = useReducer(phoneNumberReducer, '')
+    const [formatedPhoneNumber, setFormatedPhoneNumber] = useState('')
     
     function phoneNumberReducer(number, action) {
         switch (action.type) {
             case 'update': {
+                if(number.length == 10) {
+                    return number
+                }
                 return number + action.value
             }
             case 'delete': {
@@ -22,13 +26,25 @@ function PromoBanner() {
             }
         }
     }
+
+    function formatPhoneNumber(input) {
+        let formattedNumber = '+7(___)___-__-__'
+        for (let i = 0; i < input.length && i < 10; i++) {
+            formattedNumber = formattedNumber.replace('_', input[i])
+        }
+        setFormatedPhoneNumber(formattedNumber)
+    }
+
+    useEffect(()=> {
+        formatPhoneNumber(phoneNumber)
+    }, [phoneNumber])
     
 
     return (
         <>
             <div className='promo-banner'>
                 <h2 className='h2-promo'>Введите ваш номер мобильного телефона</h2>
-                <input className='phone-input' type="tel" name='phone' placeholder='+7(___)-___-__' value={phoneNumber} />
+                <input className='phone-input' type="tel" name='phone' placeholder='+7(___)___-__' value={formatedPhoneNumber} readOnly/>
                 <p className='p-promo'>и с Вами свяжется наш менеждер для дальнейшей консультации</p>
                 <Keypad dispatcher={dispatchPhoneNumber}/>
                 <div>
