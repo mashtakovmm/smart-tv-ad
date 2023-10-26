@@ -6,10 +6,14 @@ function Button(props) {
     const focus = props.focus
     const className = props.className
     const isDisabled = props.isDisabled
-    const Callback = props.callback
+    const buttonType = props.buttonType ? props.buttonType : "default"
+    let updateCallback, deleteCallback
+
+    if(props.callbacks) {
+        [updateCallback, deleteCallback] = props.callbacks
+    }
 
     const [isActive, setIsActive] = useState(!isDisabled)
-
     const buttonRef = useRef(null);
 
     useEffect(()=>{
@@ -18,8 +22,24 @@ function Button(props) {
         }
     },[])
 
+    function onClick() {
+        switch (buttonType){
+            case "num": {
+                updateCallback(value)
+                break;
+            }
+            case "del": {
+                deleteCallback()
+                break;
+            }
+            default: {
+                return
+            }
+        }
+    }
+
     return (
-        <button ref={buttonRef} className={className} disabled={!isActive}>{value}</button>
+        <button ref={buttonRef} className={className} disabled={!isActive} onClick={onClick}>{value}</button>
     )
 }
 
