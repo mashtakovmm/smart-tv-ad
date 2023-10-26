@@ -39,3 +39,15 @@ button:disabled {
 .accept-button {
     width: 284px;
 }
+
+.exit-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px black solid;
+    background-color: white;
+    height: 52px;
+    width: 88px;
+    font-size: 30px;
+    margin: 20px;
+}

@@ -87,3 +87,18 @@
     width: 110px;
     height: 110px;
 }
+
+.accepted-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 284px;
+}
+
+.accepted-h1 {
+    font-size: 32px;
+}
+
+.p-accepted {
+    font-size: 14px;
+}
