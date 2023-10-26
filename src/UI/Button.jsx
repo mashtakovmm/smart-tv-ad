@@ -8,7 +8,6 @@ function Button(props) {
     const isDisabled = props.isDisabled
     const callback = props.callback
     
-    const [isActive, setIsActive] = useState(!isDisabled)
     const buttonRef = useRef(null);
 
     useEffect(()=>{
@@ -24,7 +23,7 @@ function Button(props) {
     }
 
     return (
-        <button ref={buttonRef} className={className} disabled={!isActive} onClick={onClick}>{value}</button>
+        <button ref={buttonRef} className={className} disabled={isDisabled} onClick={onClick}>{value}</button>
     )
 }
 

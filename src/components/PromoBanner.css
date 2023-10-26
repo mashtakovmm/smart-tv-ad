@@ -1,16 +1,16 @@
-.promo-banner{
+.promo-banner {
     position: absolute;
     background-color: #86D3F4;
     color: black;
     width: 284px;
     height: calc(100vh - 69px - 69px);
-    padding:  69px 46px;
+    padding: 69px 46px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 13px;
 
 }
@@ -39,6 +39,51 @@
     font-size: 14px;
 }
 
+.checkbox-container {
+    width: 284px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.checkbox {
+    min-width: 36px;
+    height: 36px;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: transparent;
+}
+
 .label-promo {
     color: #565656;
+    text-align: left;
+}
+
+.qr-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 40px;
+    max-width: 314px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.qr-span {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.qr-img {
+    width: 110px;
+    height: 110px;
 }

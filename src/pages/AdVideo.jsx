@@ -6,7 +6,7 @@ function AdVideo() {
 
     return (
         <div>
-            <AdBanner />
+            <AdBanner timeout={5000}/>
             <Video src={videoSrc} />
         </div>
     )
