@@ -14,6 +14,7 @@ function PromoBanner() {
     const [checked, setChecked] = useState(false)
     const [buttonDisabled, setButtonDisabled] = useState(false)
     const [accepted, setAccepted] = useState(false)
+
     const containerRef = useRef(null)
 
     // keyboard navigation
@@ -144,6 +145,7 @@ function PromoBanner() {
 
     function handleSendInfo() {
         if (!buttonDisabled) {
+            SelectByIndex("3", "0")
             setAccepted(true)
         }
     }
@@ -177,7 +179,7 @@ function PromoBanner() {
             )}
 
             {/* absolute components */}
-            <Link to={"/"}><Button value={"✕"} className="exit-button" dataIndexX="3" dataIndexY="0" /></Link>
+            <Link to={"/"}><Button value={"✕"} className="exit-button" dataIndexX="3" dataIndexY="0"/></Link>
             <div className='qr-container'>
                 <span className='qr-span'>Сканируйте QR-код ДЛЯ ПОЛУЧЕНИЯ ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИИ</span>
                 <img className='qr-img' src={qr} alt="qr code" />

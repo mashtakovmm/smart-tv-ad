@@ -3,6 +3,7 @@
     padding: 0px;
     font-family: 'Roboto', sans-serif;
     outline: none;
+    pointer-events: none;
 }
 
 
