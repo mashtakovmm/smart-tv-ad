@@ -198,7 +198,7 @@ function PromoBanner() {
             )}
 
             {/* absolute components */}
-            <Link to={"/"}><Button value={"✕"} className="exit-button" dataIndexX="3" dataIndexY="0" /></Link>
+            <Link to={"/smart-tv-ad"}><Button value={"✕"} className="exit-button" dataIndexX="3" dataIndexY="0" /></Link>
             <div className='qr-container'>
                 <span className='qr-span'>Сканируйте QR-код ДЛЯ ПОЛУЧЕНИЯ ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИИ</span>
                 <img className='qr-img' src={qr} alt="qr code" />

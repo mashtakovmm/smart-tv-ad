@@ -21,7 +21,7 @@ function AdBanner(props) {
             <h2 className='h2'>ИСПОЛНИТЕ СВОЮ МЕЧТУ! ПОДАРИТЕ СЕБЕ ПОЕДКУ В ГОРЫ!</h2>
             <img className='qr-img' src={qr} alt="qr code" />
             <p className='p'>Сканируйте QR-код или нажмите ОК</p>
-            <Link to={"/promo"}><Button link="/promo" value="OK" focus={true} className="link-button" /></Link>
+            <Link to={"/smart-tv-ad/promo/"}><Button link="/promo" value="OK" focus={true} className="link-button" /></Link>
         </div>
     )
 }

@@ -12,8 +12,8 @@ function App() {
             <AppWrapper>
                 <Router>
                     <Routes>
-                        <Route path="/" element={<AdVideo />} />
-                        <Route path='promo/' element={<PromoVideo />} />
+                        <Route path="/smart-tv-ad" element={<AdVideo />} />
+                        <Route path='/smart-tv-ad/promo/' element={<PromoVideo />} />
                     </Routes>
                 </Router>
             </AppWrapper>
