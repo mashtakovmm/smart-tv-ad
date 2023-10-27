@@ -7,6 +7,8 @@ function Button(props) {
     const className = props.className
     const isDisabled = props.isDisabled
     const callback = props.callback
+    const dataIndexX = props.dataIndexX
+    const dataIndexY = props.dataIndexY
     
     const buttonRef = useRef(null);
 
@@ -23,7 +25,7 @@ function Button(props) {
     }
 
     return (
-        <button ref={buttonRef} className={className} disabled={isDisabled} onClick={onClick}>{value}</button>
+        <button ref={buttonRef} className={className} disabled={isDisabled} onClick={onClick} data-index-x={dataIndexX} data-index-y={dataIndexY}>{value}</button>
     )
 }
 

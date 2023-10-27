@@ -7,17 +7,17 @@ function Keypad(props) {
 
     return (
         <div className="keypad-container">
-            <Button value={1} className="number-button" callback={()=>dispatcher({type:'update', value:1})}></Button>
-            <Button value={2} className="number-button" callback={()=>dispatcher({type:'update', value:2})}></Button>
-            <Button value={3} className="number-button" callback={()=>dispatcher({type:'update', value:3})}></Button>
-            <Button value={4} className="number-button" callback={()=>dispatcher({type:'update', value:4})}></Button>
-            <Button value={5} className="number-button" callback={()=>dispatcher({type:'update', value:5})}></Button>
-            <Button value={6} className="number-button" callback={()=>dispatcher({type:'update', value:6})}></Button>
-            <Button value={7} className="number-button" callback={()=>dispatcher({type:'update', value:7})}></Button>
-            <Button value={8} className="number-button" callback={()=>dispatcher({type:'update', value:8})}></Button>
-            <Button value={9} className="number-button" callback={()=>dispatcher({type:'update', value:9})}></Button>
-            <Button value="Стереть" className="delete-button" callback={()=>dispatcher({type:'delete'})}></Button>
-            <Button value={0} className="number-button" callback={()=>dispatcher({type:'update', value:0})}></Button>
+            <Button value={1} className="number-button" callback={()=>dispatcher({type:'update', value:1})} dataIndexX="0" dataIndexY="0"></Button>
+            <Button value={2} className="number-button" callback={()=>dispatcher({type:'update', value:2})} dataIndexX="1" dataIndexY="0"></Button>
+            <Button value={3} className="number-button" callback={()=>dispatcher({type:'update', value:3})} dataIndexX="2" dataIndexY="0"></Button>
+            <Button value={4} className="number-button" callback={()=>dispatcher({type:'update', value:4})} dataIndexX="0" dataIndexY="1"></Button>
+            <Button value={5} className="number-button" callback={()=>dispatcher({type:'update', value:5})} dataIndexX="1" dataIndexY="1"></Button>
+            <Button value={6} className="number-button" callback={()=>dispatcher({type:'update', value:6})} dataIndexX="2" dataIndexY="1"></Button>
+            <Button value={7} className="number-button" callback={()=>dispatcher({type:'update', value:7})} dataIndexX="0" dataIndexY="2"></Button>
+            <Button value={8} className="number-button" callback={()=>dispatcher({type:'update', value:8})} dataIndexX="1" dataIndexY="2"></Button>
+            <Button value={9} className="number-button" callback={()=>dispatcher({type:'update', value:9})} dataIndexX="2" dataIndexY="2"></Button>
+            <Button value="Стереть" className="delete-button" callback={()=>dispatcher({type:'delete'})} dataIndexX="0" dataIndexY="3"></Button>
+            <Button value={0} className="number-button" callback={()=>dispatcher({type:'update', value:0})} dataIndexX="1" dataIndexY="3"></Button>
         </div>
     )
 }

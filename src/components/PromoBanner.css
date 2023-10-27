@@ -57,6 +57,10 @@
     background-color: transparent;
 }
 
+.checkbox:focus {
+    background-color: #565656;
+}
+
 .label-promo {
     color: #565656;
     text-align: left;
