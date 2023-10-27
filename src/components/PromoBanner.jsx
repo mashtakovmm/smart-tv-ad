@@ -37,8 +37,18 @@ function PromoBanner() {
     }, [])
 
     function handleKeyboard(e) {
+        // handle the number
+        const num = parseInt(e.key, 10);
+        if (num >= 0 && num <= 9) {
+            dispatchPhoneNumber({ type: 'update', value: num })
+        }
         let prevState = [y, x]
         switch (e.key) {
+            // handle backspace
+            case "Backspace": {
+                dispatchPhoneNumber({ type: 'delete' })
+            }
+            // handle navigation
             case "ArrowLeft": {
                 y--
                 break
@@ -140,7 +150,7 @@ function PromoBanner() {
         if (e.key === "Enter" || e.key === " " || (e.button === 0)) {
             console.log(e.key);
             setChecked(prev => !prev)
-        } 
+        }
     }
 
     function handleSendInfo() {
@@ -179,7 +189,7 @@ function PromoBanner() {
             )}
 
             {/* absolute components */}
-            <Link to={"/"}><Button value={"✕"} className="exit-button" dataIndexX="3" dataIndexY="0"/></Link>
+            <Link to={"/"}><Button value={"✕"} className="exit-button" dataIndexX="3" dataIndexY="0" /></Link>
             <div className='qr-container'>
                 <span className='qr-span'>Сканируйте QR-код ДЛЯ ПОЛУЧЕНИЯ ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИИ</span>
                 <img className='qr-img' src={qr} alt="qr code" />
