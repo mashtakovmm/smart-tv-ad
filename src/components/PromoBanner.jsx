@@ -4,7 +4,7 @@ import "./PromoBanner.css"
 import Keypad from './Keypad'
 import Button from '../UI/Button'
 import { useEffect, useReducer, useState, useRef } from 'react'
-import { Link, useNavigate  } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 function PromoBanner() {
@@ -21,7 +21,7 @@ function PromoBanner() {
 
     let timeoutId
     const timeout = 10_000
-    
+
     // keyboard navigation
 
     const UIMatrix = [
@@ -45,9 +45,8 @@ function PromoBanner() {
         // check for idling
         clearTimeout(timeoutId)
         timeoutId = setTimeout(() => {
-            redirect('/')
+            redirect('/smart-tv-ad')
         }, timeout);
-
         // handle the number
         const num = parseInt(e.key, 10);
         if (num >= 0 && num <= 9) {
@@ -103,6 +102,11 @@ function PromoBanner() {
     }
 
     function SelectByIndex(indexX, indexY) {
+        // check for idling
+        clearTimeout(timeoutId)
+        timeoutId = setTimeout(() => {
+            redirect('/smart-tv-ad')
+        }, timeout);
         const selector = `[data-index-x="${indexX}"][data-index-y="${indexY}"]`;
         const element = document.querySelector(selector);
         if (element) {
